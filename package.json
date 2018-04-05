@@ -1,0 +1,14 @@
+{
+    "name": "my-app",
+    "description": "webb lu's practice of vue",
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "dependencies": {
+        "nuxt": "^1.4.0",
+        "store": "^2.0.12"
+    }
+}
