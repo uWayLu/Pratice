@@ -1,20 +1,3 @@
 <template>
-  <main>
-    <h1>TodoList demo</h1>
-    <TodoList/>
-  </main>
+    <h1>Hello, world!</h1>
 </template>
-
-<script>
-import TodoList from "../components/TodoList.vue";
-
-export default {
-  components: {
-    TodoList
-  }
-};
-</script>
-
-<style>
-
-</style>
