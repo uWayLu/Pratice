@@ -1,9 +1,9 @@
 <template>
   <div>
       <ul>
-          <TodoItem v-for="item in items" 
-                    :key="item.label" 
-                    :item="item" 
+          <TodoItem v-for="item in items"
+                    :key="item.label"
+                    :item="item"
                     @remove="remove(item)" @done="save(item)"/>
       </ul>
       <form @submit.prevent>

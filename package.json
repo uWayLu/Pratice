@@ -3,7 +3,7 @@
     "description": "webb lu's practice of vue",
     "version": "0.4.19",
     "scripts": {
-        "dev": "nuxt",
+        "dev": "cross-env HOST=0.0.0.0 PORT=3000 nuxt",
         "build": "nuxt build",
         "start": "nuxt start",
         "generate": "nuxt generate"
@@ -16,7 +16,11 @@
     },
     "config": {
         "nuxt": {
-            "port": "3000"
+            "host": "122.254.33.18",
+            "port": "80"
         }
+    },
+    "devDependencies": {
+        "cross-env": "^5.1.4"
     }
 }

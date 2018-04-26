@@ -44,11 +44,7 @@
       <v-toolbar-title v-html="title"></v-toolbar-title>
     </v-toolbar>
     <v-content>
-        <v-container fluid fill-height>
-          <v-layout justify-center align-center>
-            <main><nuxt /></main>
-          </v-layout>
-        </v-container>
+      <nuxt />
     </v-content>
     <v-footer app fixed>
       <span>&copy; 2018</span>
@@ -60,12 +56,14 @@
 <script>
 export default {
   data: () => ({
-    drawer: true,
+    drawer: false,
     fixed: true,
     items: [
       { icon: "home", title: "Welcome", to: "/" },
       { icon: "info", title: "About", to: "/about" },
-      { icon: "person", title: "Admin", to: "/admin" }
+      { icon: "person", title: "Admin", to: "/admin" },
+      { icon: "list", title: "Todo", to: "/todolist" },
+      { icon: "list", title: "Go West!", to: "/fgo-gowest" }
     ],
     title: "Practice with Nuxt"
   }),
