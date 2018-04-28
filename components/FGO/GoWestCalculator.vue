@@ -1,7 +1,7 @@
 <template>
     <v-container grid-list-lg fluid text-xs-center>
         <v-layout align-center justify-center row wrap>
-            <v-flex sm6 xs12>
+            <v-flex md6>
                 <v-card class="elevation-12">
                     <v-toolbar dark color="primary">
                         <v-toolbar-title>Features</v-toolbar-title>
@@ -23,11 +23,6 @@
                     <v-btn color="success" @click="shopDataSetSave">Save</v-btn>
                     <v-btn color="success" @click="shopDataSetDelete">Reset</v-btn>
                     <v-divider></v-divider>
-                </v-card>
-            </v-flex>
-            <v-flex sm6 xs12>
-                <v-card>
-                    <v-card-text class="px-0">功徳の玉</v-card-text>
                 </v-card>
             </v-flex>
         </v-layout>
@@ -69,10 +64,12 @@
                                 <v-list-tile-content>需要 {{ Math.ceil(shopDataSetAccumulator(sId) / expetedPerDropsSubtotal(shelf.title)) }} 場</v-list-tile-content>
                             </v-list-tile>
                             <v-list-tile v-if="shelf.price !== 'undefined'">
-                                <v-list-tile-content>需要 {{ expectedDropsPriceTotal(sId, shelf.title) }} 功德玉</v-list-tile-content>
+                                <v-list-tile-content>需要 {{ expectedDropsPriceTotal(sId, shelf.title) }} {{ expectedPerDropsFilter(shelf.title).unit }}</v-list-tile-content>
                                 <v-list-tile-content
-                                    v-if="expectedPerDropsFilter(shelf.unit) !== 'undefined'"
-                                >需要 {{ Math.ceil(expectedDropsPriceTotal(sId, shelf.title) / 52 * 40) }} AP</v-list-tile-content>
+                                    v-if="expectedPerDropsFilter(shelf.title).unit ? a = expectedPerDropsFilter(shelf.title) : a = null"
+                                >需要 {{ Math.ceil(expectedDropsPriceTotal(sId, shelf.title)
+                                        / expetedPerDropsSubtotal(a.unit)
+                                        * expectedPerDropsFilter(a.unit).price) }} {{ expectedPerDropsFilter(a.unit).unit }} </v-list-tile-content>
                             </v-list-tile>
                         </v-list>
                     </v-card-text>
