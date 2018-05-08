@@ -63,7 +63,8 @@ export default {
       { icon: "info", title: "About", to: "/about" },
       { icon: "person", title: "Admin", to: "/admin" },
       { icon: "list", title: "Todo", to: "/todolist" },
-      { icon: "list", title: "Go West!", to: "/fgo-gowest" }
+      { icon: "list", title: "Go West!", to: "/fgo-gowest" },
+      { icon: "list", title: "Fate Apocrypha", to: "/fgo-fap" }
     ],
     title: "Practice with Nuxt"
   }),
