@@ -2,12 +2,12 @@ import firebase from 'firebase'
 
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyDnQpweK6gWXFON7_-enlgV1OU-BO551xs",
-    authDomain: "nuxt-firebase-todolist.firebaseapp.com",
-    databaseURL: "https://nuxt-firebase-todolist.firebaseio.com",
-    projectId: "nuxt-firebase-todolist",
-    storageBucket: "",
-    messagingSenderId: "593686607623"
+    apiKey: "AIzaSyCcvWbgN8G2p-QVu-81fQR8mrI7ngU4Jcg",
+    authDomain: "day-off-practice.firebaseapp.com",
+    databaseURL: "https://day-off-practice.firebaseio.com",
+    projectId: "day-off-practice",
+    storageBucket: "day-off-practice.appspot.com",
+    messagingSenderId: "472999121347"
 };
 // firebase.initializeApp(config);
 
